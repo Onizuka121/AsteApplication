@@ -11,7 +11,6 @@ public enum ARTICOLO {
 			+ "ed è oggi conservato al Musée du Louvre.",
 			
 			"olio su tela , quadro di legno di quercia",
-			Condizione.MEDIO_ECCELLENTE,
 			21.45
 			),
 	DAVID_MICHELANGELO( 1501,
@@ -22,7 +21,6 @@ public enum ARTICOLO {
 			+ " Il David è considerato l'apice del lavoro scultoreo di Michelangelo.",
 			
 			"MARMO",
-			Condizione.OTTIMO,
 			300.23
 			
 			),
@@ -30,13 +28,11 @@ public enum ARTICOLO {
 			"Tigre imbalsamata da un grande cacciatore ,\n\t"
 			+ " si dice che sia stata uccisa con un arco a punta velenosa\n\t",
 			"tessuto animale , pelle animale",
-			Condizione.BUONO,
 			70.30
 			),
 	RABARAMA( 1696,
 			"Scultura Rabarama della serie e voluto corredata di garanzia.",
 			"RAME",
-			Condizione.ROVINATO,
 			6.00
 			),
 	DILLON_BOY( 2023, 
@@ -44,7 +40,6 @@ public enum ARTICOLO {
 			+ " Dillon Boy ha sviluppato il seguito in più rapida crescita nel mondo dell'arte online.\n\t"
 			+ " Nel 2017 D-Boy è diventato uno degli artisti più ricercati sul World Wide Web\n\t",
 			"RAME",
-			Condizione.ECCELLENTE,
 			2.00
 			),
 	ADAM_AND_EVE(
@@ -55,7 +50,6 @@ public enum ARTICOLO {
 			+ "Diploma presso la Facoltà di Scultura presso lo studio del prof. \n\t"
 			+ "Józef Sękowski nel 2002.\n\t",
 			"Bronzo patinato, legno patinato",
-			Condizione.OTTIMO,
 			3.00
 			);
 	
@@ -64,14 +58,12 @@ public enum ARTICOLO {
 	private int epoca;
 	private String materiale;
 	private String descrizione;
-	private Condizione condizioni;
 	private double peso;
 	
-	ARTICOLO(int epoca,String descrizione,String materiale, Condizione condizioni,double peso) {
+	ARTICOLO(int epoca,String descrizione,String materiale,double peso) {
 		this.setEpoca(epoca);
 		this.setDescrizione(descrizione);
 		this.setMateriale(materiale);
-		this.setCondizioni(condizioni);
 		this.setPeso(peso);
 	}
 	
@@ -95,12 +87,7 @@ public enum ARTICOLO {
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
-	public Condizione getCondizioni() {
-		return condizioni;
-	}
-	public void setCondizioni(Condizione condizioni) {
-		this.condizioni = condizioni;
-	}
+	
 	public double getPeso() {
 		return peso;
 	}
